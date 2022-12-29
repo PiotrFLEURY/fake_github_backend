@@ -13,6 +13,13 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  workflow_dispatch:
+    inputs:
+      reason:
+        type: text
+        required: false
+        description: 'Explain why you launch this flow'
+        default: ''
 
 jobs:
   build:
